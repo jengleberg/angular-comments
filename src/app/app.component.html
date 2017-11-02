@@ -1,4 +1,9 @@
 <h1>Comments</h1>
+<form>
+	<input [(ngModel)]="text" placeholder="Enter Text">
+	<input [(ngModel)]="author" placeholder="Enter Author">
+	<button type="submit" (click)="addComment()">Add Comment</button>
+</form>
 <ul>
-    <li *ngFor="let comment of comments">{{comment}}</li>
+    <li *ngFor="let comment of comments">{{comment.text}} - {{comment.author}}</li>
 </ul>
